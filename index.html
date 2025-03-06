@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Mask Removal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="./static/js/script.js"></script>
+
+</head>
+
+<body>
+  <!--Title-->
+  <section class="hero">
+    <div class="hero-body" style="padding-bottom: 0;">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">👦🏻 잃어버린 얼굴을 찾아서</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://github.com/gnueaj">Jaeung Lee</a><sup>1*</sup>,</span>
+              <span class="author-block">
+                <a href="https://github.com/glasshong">Yuri Hong</a><sup>2*</sup>,</span>
+              <span class="author-block">
+                <a href="https://github.com/Geniefree">Jinhee Yoo</a><sup>2*</sup>,</span>
+              <span class="author-block">
+                <a href="https://github.com/kyuleeee">Jeongyoun Kwon</a><sup>3*</sup>, and </span>
+              <span class="author-block">
+                <a href="https://github.com/Jar199">Jaeryung Hong</a><sup>4&dagger;*</sup></span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Sungkyunkwan University</span>&emsp;
+              <span class="author-block"><sup>2</sup>Korea University</span>&emsp;
+              <span class="author-block"><sup>3</sup>Chung-Ang University</span>&emsp;
+              <span class="author-block"><sup>4</sup>Ewha Womans University</span><br>
+              <span class="poppins-extrabold"><sup>*</sup><a href="https://deepdaiv.oopy.io/"><span style="color : #264a8e;">deep daiv.</span></a></span>&emsp;
+              <span class="author-block"><sup>&dagger;</sup>Project Lead</span>&emsp;
+            </div>
+            <div class="column has-text-centered">
+                <span class="link-block">
+                  <a href="https://github.com/deep-daiv-Computer-Vision/mask_removal"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                  <a href="https://round-mirror-754.notion.site/fff7f0ddc12280df9915e39fa676a407" 
+                    class="external-link button is-normal is-rounded">
+                    <span class="icon">
+                      <i class="fas fa-file"></i>
+                    </span>
+                    <span>Project Detail</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Motivation-->
+  <section class="section" style="padding: 30px;">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Motivation</h2>
+          <div align="center" style="padding: 50px 0px 50px 0px;">
+            <img src="static/images/motivation.jpg" style="width:90%; transform: scale(1.3);">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!--Pipeline-->
+  <section class="section" style="padding: 30px;">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Pipeline</h2>
+          <div align="center" style="padding: 100px 0px 123px 0px;">
+            <img src="static/images/pipeline.jpg" style="width:70%; transform: scale(1.5);">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 0; padding-bottom: 0;">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <div style="display: inline-block; width:100%;">
+            <div class="img_tag">
+              <h3>Object Detection (YOLOv8, Ultralytics)</h3>
+              <img src="static/images/detection.jpg" style="width:90%; height:auto; padding: 10px">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section" style="padding-top: 0; padding-bottom: 0;">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <div style="display: inline-block; width:100%;">
+            <div class="img_tag">
+              <h3>Super Resolution (Stable Diffusion, '22 CVPR)</h3>
+              <img src="static/images/superresolution.jpg" style="width:90%; height:auto; padding: 10px">
+          </div>
+        </div>
+      </div> i
+    </div>
+  </section>
+  <section class="section" style="padding-top: 0;">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <div style="display: inline-block; width:100%;">
+            <div class="img_tag">
+              <h3>Image Segmentation (Segment Anything, '23 ICCV)</h3>
+              <img src="static/images/segmentation.jpg" style="width:90%; height:auto; padding: 10px">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section" style="padding-top: 0; padding-bottom: 0;">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <div style="display: inline-block; width:100%;">
+            <div class="img_tag">
+              <h3>Image Generation (DreamBooth, '23 CVPR)</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="hero is-small">
+    <div class="hero-body" id="main-slider">
+      <div class="container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+            <img src="static/images/generation1.jpg" style="width:100%; height:auto; padding: 10px">
+          </div>
+          <div class="item">
+            <img src="static/images/generation2.jpg" style="width:100%; height:auto; padding: 10px">
+          </div>
+          <div class="item">
+            <img src="static/images/generation3.jpg" style="width:100%; height:auto; padding: 10px">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <section class="section" style="padding-top: 0;">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <div style="display: inline-block; width:100%;">
+            <div class="img_tag">
+              <h3>Image Generation (Soft Inpainting)</h3>
+              <img src="static/images/softinpainting.jpg" style="width:90%; height:auto; padding: 10px">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Visual Comparisons -->
+  <section class="section" style="padding: 100px 0px 50px 0px; margin: 0;">
+    <div class="container ">
+      <div class=" has-text-centered">
+        <h2 class="title is-3">Visual Comparisons</h2> 
+        <div style="display: flex; justify-content: center; gap: 50px; padding-bottom: 30px;">
+        </div>
+        <div class="columns is-centered">
+          <div class="column">
+            <div class="content">
+              <div class="columns is-centered">
+                <div class="column is-full-width">
+                  <div id="example1" class="bal-container-small" style="padding-bottom: 100%;">
+                    <div class="bal-after">
+                      <img src="./static/images/comparsion/after.jpg">
+                      <div class="bal-afterPosition afterLabel">
+                        After
+                      </div>
+                    </div>
+                    <div class="bal-before">
+                      <div class="bal-before-inset">
+                        <img src="./static/images/comparsion/before.jpg">
+                        <div class="bal-beforePosition beforeLabel">
+                          Before
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bal-handle" style="left:96.4968152866242%;">
+                      <span class=" handle-left-arrow"></span>
+                      <span class="handle-right-arrow"></span>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 0;">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-2">Results</h2>
+          <div class="item">
+            <img src="static/images/result1.jpg" style="width:90%; height:auto; padding: 10px">
+          </div>
+          <div class="item">
+           <img src="static/images/result2.jpg" style="width:90%; height:auto; padding: 10px">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <script> 
+    new BeforeAfter({
+      id: '#example1'
+    });
+    new BeforeAfter({
+      id: '#example2'
+    });
+    // new BeforeAfter({
+    //   id: '#example3'
+    // });
+    // new BeforeAfter({
+    //   id: '#example4'
+    // });
+    // new BeforeAfter({
+    //   id: '#example5'
+    // });
+    // new BeforeAfter({
+    //   id: '#example6'
+    // });
+
+  </script>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Citations</h2>
+    <pre><code>
+      @software{yolov8_2023,
+        author = {Jocher, Glenn and Chaurasia, Ayush and Qiu, Jing},
+        title = {YOLO by Ultralytics},
+        url = {https://github.com/ultralytics/ultralytics},
+        version = {8.0.0},
+        year = {2023}
+      }
+      @article{kirillov2023segany,
+        title={Segment Anything},
+        author={Kirillov, Alexander and Mintun, Eric and Ravi, Nikhila and Mao, Hanzi and Rolland, Chloe and Gustafson, Laura and Xiao, Tete and Whitehead, Spencer and Berg, Alexander C. and Lo, Wan-Yen and Doll{\'a}r, Piotr and Girshick, Ross},
+        journal={arXiv:2304.02643},
+        year={2023}
+      }
+      @misc{rombach2021highresolution,
+            title={High-Resolution Image Synthesis with Latent Diffusion Models}, 
+            author={Robin Rombach and Andreas Blattmann and Dominik Lorenz and Patrick Esser and Björn Ommer},
+            year={2021},
+            eprint={2112.10752},
+            archivePrefix={arXiv},
+            primaryClass={cs.CV}
+      }
+      @inproceedings{ruiz2023dreambooth,
+        title={Dreambooth: Fine tuning text-to-image diffusion models for subject-driven generation},
+        author={Ruiz, Nataniel and Li, Yuanzhen and Jampani, Varun and Pritch, Yael and Rubinstein, Michael and Aberman, Kfir},
+        booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+        year={2023}
+      }
+      
+    </code></pre>
+  </div>
+</section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website borrowed template from <a href="https://github.com/nerfies/nerfies.github.io">nerfies</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
