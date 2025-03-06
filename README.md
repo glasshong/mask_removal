@@ -7,7 +7,9 @@
     <li>권정연, 유진희, 이재웅, 홍유리</li>
     <li>Diffusion 및 DreamBooth Fine-tuning을 활용한 마스크로 가려진 얼굴 생성</li>
     <li><a href="https://deep-daiv-computer-vision.github.io/mask_removal/"><img src='https://img.shields.io/badge/Project Page-Mask Removal-blue'></a>&nbsp;
-<a href='https://github.com/deep-daiv-Computer-Vision/mask_removal'><img src='https://img.shields.io/badge/Code-Mask Removal-red'></a><br></a></li>
+<a href='https://github.com/deep-daiv-Computer-Vision/mask_removal'><img src='https://img.shields.io/badge/Code-Mask Removal-red'></a>
+        &nbsp;
+<a href="https://yurihong.notion.site/deepdaiv-24w-project?pvs=4"><img src='https://img.shields.io/badge/Project detail-Mask Removal-yellow'></a></li><br></a></li>
   </ul>
 
 <!-- 
