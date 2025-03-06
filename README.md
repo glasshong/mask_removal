@@ -1,4 +1,4 @@
-## '24 Winter Computer Vision - Team 이응이들
+## '24 겨울 Computer Vision - Team 이응이들
 
 <div align="center">
 <h3> 잃어버린 얼굴을 찾아서 </h3>
